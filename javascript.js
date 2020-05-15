@@ -9,6 +9,7 @@ var question = document.querySelector('#question');
 var options = document.querySelector('#options');
 var choicebtn = document.createElement('button');
 
+
 var c = 76;
 
 var count = 0;
@@ -87,5 +88,4 @@ function renderQuestion() {
     choicebtn.onclick = nextQ;
   });
 }
-
 
