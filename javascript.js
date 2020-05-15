@@ -65,3 +65,6 @@ var questions = [
     correct: '1995',
   },
 ];
+
+var questionLimit = questions.length - 1;
+var activeQuestion = 0;
