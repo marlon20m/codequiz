@@ -20,6 +20,7 @@ if (localStorage.getItem('count')) {
 
 options.addEventListener('click', function () {
 
+
   count++;
   counter.textContent = count;
   localStorage.setItem('count', count);
@@ -42,26 +43,31 @@ function countdownTimer() {
 }
 update = setInterval('countdownTimer()', 1000);
 
-
 var questions = [
-    {
-      id: 0,
-      questionz: ['What does DOM stand for?'],
-      choices: [
-        'Definite Object Material',
-        'Dominator Of Mystery',
-        'Dementor of Misery',
-        'Document Object Model',
-      ],
-      correct: 'Document Object Model',
-    },
-
-    {
-        id: 1,
-        questionz: [
-          'What is the first language that became popular for website coding',
-        ],
-        choices: ['Node.js', 'HTML', 'C++', 'REACT'],
-        correct: 'HTML',
-      },
+  {
+    id: 0,
+    questionz: ['What does DOM stand for?'],
+    choices: [
+      'Definite Object Material',
+      'Dominator Of Mystery',
+      'Dementor of Misery',
+      'Document Object Model',
+    ],
+    correct: 'Document Object Model',
+  },
+  {
+    id: 1,
+    questionz: [
+      'What is the first language that became popular for website coding',
+    ],
+    choices: ['Node.js', 'HTML', 'C++', 'REACT'],
+    correct: 'HTML',
+  },
+  {
+    id: 2,
+    questionz: ['What year was Javascript created?'],
+    choices: ['2006', '1991', '1995', '1928'],
+    correct: '1995',
+  },
+];
 
