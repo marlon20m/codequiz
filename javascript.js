@@ -50,3 +50,11 @@ var questions = [
       ],
       correct: 'Document Object Model',
     },
+    {
+        id: 1,
+        questionz: [
+          'What is the first language that became popular for website coding',
+        ],
+        choices: ['Node.js', 'HTML', 'C++', 'REACT'],
+        correct: 'HTML',
+      },
