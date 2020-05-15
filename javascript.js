@@ -55,7 +55,13 @@ var questions = [
       ],
       correct: 'Document Object Model',
     },
-    count++;
-    counter.textContent = count;
-    localStorage.setItem('count', count);
+
+    {
+        id: 1,
+        questionz: [
+          'What is the first language that became popular for website coding',
+        ],
+        choices: ['Node.js', 'HTML', 'C++', 'REACT'],
+        correct: 'HTML',
+      },
 
