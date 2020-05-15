@@ -9,7 +9,6 @@ var question = document.querySelector('#question');
 var options = document.querySelector('#options');
 var choicebtn = document.createElement('button');
 
-
 var c = 76;
 
 var count = 0;
@@ -31,9 +30,20 @@ clearance.addEventListener('click', function () {
   storage.removeItem();
 });
 
+
+function countdownTimer() {
+  c = c - 1;
+  if (c < 76) {
+    timeLeft.innerHTML = c + ' :Timer';
+  }
+  if (c < 1) {
+    window.clearInterval(update);
+  }
+}
+update = setInterval('countdownTimer()', 1000);
+
     count++;
     counter.textContent = count;
     localStorage.setItem('count', count);
   });
   
-
