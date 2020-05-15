@@ -73,6 +73,7 @@ var questions = [
 var questionLimit = questions.length - 1;
 var activeQuestion = 0;
 
+
 function renderQuestion() {
   q = questions[activeQuestion];
   question.textContent = q.questionz;
@@ -86,4 +87,5 @@ function renderQuestion() {
     choicebtn.onclick = nextQ;
   });
 }
+
 
