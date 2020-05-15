@@ -11,3 +11,16 @@ var choicebtn = document.createElement('button');
 
 var c = 76;
 
+var count = 0;
+counter.textContent = count;
+if (localStorage.getItem('count')) {
+  count = localStorage.getItem('count');
+  counter.textContent = count;
+}
+
+options.addEventListener('click', function () {
+    count++;
+    counter.textContent = count;
+    localStorage.setItem('count', count);
+  });
+  
