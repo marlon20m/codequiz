@@ -20,7 +20,6 @@ if (localStorage.getItem('count')) {
 
 options.addEventListener('click', function () {
 
-
   count++;
   counter.textContent = count;
   localStorage.setItem('count', count);
@@ -71,3 +70,5 @@ var questions = [
   },
 ];
 
+var questionLimit = questions.length - 1;
+var activeQuestion = 0;
