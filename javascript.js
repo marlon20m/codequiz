@@ -72,3 +72,18 @@ var questions = [
 
 var questionLimit = questions.length - 1;
 var activeQuestion = 0;
+
+function renderQuestion() {
+  q = questions[activeQuestion];
+  question.textContent = q.questionz;
+  options.innerHTML = '';
+  q.choices.forEach(function (choice, i) {
+    var choicebtn = document.createElement('button');
+    choicebtn.textContent = i + 1 + '. ' + choice;
+    options.appendChild(choicebtn);
+    choicebtn.setAttribute('id', 'clickAnswer');
+    choicebtn.setAttribute('value', choice);
+    choicebtn.onclick = nextQ;
+  });
+}
+
