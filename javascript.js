@@ -9,7 +9,6 @@ var question = document.querySelector('#question');
 var options = document.querySelector('#options');
 var choicebtn = document.createElement('button');
 
-
 var c = 76;
 
 var count = 0;
@@ -30,7 +29,6 @@ clearance.addEventListener('click', function () {
   counter.innerHTML = '0';
   storage.removeItem();
 });
-
 
 function countdownTimer() {
   c = c - 1;
@@ -87,5 +85,34 @@ function renderQuestion() {
     choicebtn.setAttribute('value', choice);
     choicebtn.onclick = nextQ;
   });
+}
+
+renderQuestion();
+
+function nextQ() {
+  k = questions[activeQuestion];
+  selection = questions.correct;
+
+  if (this.value !== questions[activeQuestion].correct) {
+    console.log(this.value, 'this.value');
+    console.log(k.correct);
+    c = c - 15;
+
+    if (c < 0) {
+      c = 0;
+    }
+
+    timeLeft.textContent = c;
+    validation.textContent = 'Incorrect!';
+  } else {
+    validation.textContent = 'Correct!';
+  }
+
+  question[0]++;
+
+  if (activeQuestion === questions.length) {
+  } else {
+    renderQuestion();
+  }
 }
 
