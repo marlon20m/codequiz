@@ -42,8 +42,20 @@ function countdownTimer() {
 }
 update = setInterval('countdownTimer()', 1000);
 
+
+var questions = [
+    {
+      id: 0,
+      questionz: ['What does DOM stand for?'],
+      choices: [
+        'Definite Object Material',
+        'Dominator Of Mystery',
+        'Dementor of Misery',
+        'Document Object Model',
+      ],
+      correct: 'Document Object Model',
+    },
     count++;
     counter.textContent = count;
     localStorage.setItem('count', count);
-  });
-  
+
